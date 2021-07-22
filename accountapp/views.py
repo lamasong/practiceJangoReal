@@ -29,7 +29,5 @@ def hello_world(request):
 class AccountCreatView(CreateView):
     model = User
     form_class = UserCreationForm
-
-    # 성공했을 때 어디로 다시 재연결 한것인가,
     success_url = reverse_lazy('accountapp:hello_world')
     template_name = 'accountapp/create.html'
